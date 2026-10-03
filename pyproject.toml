@@ -1,0 +1,41 @@
+[project]
+name = "st"
+version = "0.1.0"
+description = "A Smart Travel Planning Multi-Agent System"
+readme = "README.md"
+authors = [
+    { name = "Ton Oguara", email = "tomoguara@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "aiosqlite>=0.22.1",
+    "deepagents>=0.7.21",
+    "langchain>=1.4.3",
+    "langchain-core>=1.6.6",
+    "langchain-openai>=1.6.6",
+    "langchain-tavily>=0.2.18",
+    "langgraph>=1.2.12",
+    "langgraph-checkpoint-sqlite>=3.1.1",
+    "pydantic>=2.13.5",
+    "python-dotenv>=1.2.3",
+    "serpapi>=1.1.2",
+]
+
+[project.scripts]
+st = "st.main:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-m 'not live'"
+markers = [
+    "live: calls real external APIs (OpenAI, Tavily, SerpAPI); run with `pytest -m live`",
+]

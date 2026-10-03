@@ -1,0 +1,39 @@
+@startuml
+' High-level component conversion of the overview diagram in README.md:
+'   You ──► Orchestrator ──┬─► Search agent  ──► flight / hotel search (SerpAPI)
+'                          └─► Planner agent ──► web search / deep research (Tavily)
+'   ──► Synthesizer ──► answer
+
+skinparam backgroundColor white
+skinparam defaultTextAlignment center
+skinparam arrowColor #444444
+
+actor "You" as you
+
+component "Orchestrator\n(routing)" as orch #E1F0FA
+
+component "Search agent" as search #E1F0FA
+component "Planner agent" as planner #E1F0FA
+
+component "Flight / Hotel search\n(SerpAPI)" as fh #EAF6EA
+component "Web search / Deep research\n(Tavily)" as wr #EAF6EA
+
+component "Synthesizer\n(merge + format)" as synth #FDF0E0
+
+rectangle "Unified answer" as ans #FFFFFF
+
+you --> orch : travel request
+
+orch --> search : sub-query
+orch --> planner : sub-query
+
+search --> fh
+planner --> wr
+
+fh --> synth : results
+wr --> synth : results + insights
+
+synth --> ans
+ans ..> you
+
+@enduml

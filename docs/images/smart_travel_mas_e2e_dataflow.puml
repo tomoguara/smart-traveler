@@ -1,0 +1,53 @@
+@startuml
+' Component-based conversion of the end-to-end data flow diagram in
+' docs/What_We_Are_Building_Smart_Travel_Planning_MAS.md ("Data Flow (End to End)")
+
+skinparam backgroundColor white
+skinparam defaultTextAlignment center
+skinparam arrowColor #444444
+
+actor "User" as user
+
+component "Orchestrator\n(routes query,\nwrites sub-queries)" as orch #E1F0FA
+
+package "Specialized agents" {
+  component "Search Agent\n(flights + hotels)" as search #E1F0FA
+  component "Itinerary Agent\n(research + Q&A)" as itin #E1F0FA
+}
+
+package "Tools (external APIs)" {
+  component "Flight Search Tool\n(SerpAPI)" as flight #EAF6EA
+  component "Hotel Search Tool\n(SerpAPI)" as hotel #EAF6EA
+  component "Web Search Tool\n(Tavily)" as web #EAF6EA
+  component "Deep Research Tool\n(deep analysis)" as deep #EAF6EA
+}
+
+component "Synthesizer\n(unify + format)" as synth #FDF0E0
+
+database "TravelPlanner State\n(shared by all nodes)" as state #F5F5F5
+rectangle "Final recommendation\n(End / Output)" as out #FFFFFF
+
+user --> orch : user query
+orch --> search : search query\n(destination,\ndates, budget)
+orch --> itin : travel intent +\nquestions
+
+search --> flight : invoke
+search --> hotel : invoke
+flight -up-> search : results
+hotel -up-> search : results
+itin --> web : invoke
+itin --> deep : invoke
+web -up-> itin : results
+deep -up-> itin : insights
+
+search --> synth : options + prices
+itin --> synth : itinerary + rationale
+
+synth --> out : final recommendation
+
+state .> orch : reads /\nupdates
+state .> search : reads /\nupdates
+state .> itin : reads /\nupdates
+state .> synth : reads /\nupdates
+
+@enduml

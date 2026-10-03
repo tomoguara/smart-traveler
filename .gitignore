@@ -1,0 +1,24 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+.python-version
+
+# Secrets
+.env
+
+# Conversation memory (SQLite checkpoints)
+data/*.sqlite
+data/*.sqlite-*
+
+# ithers
+.idea
+.vscode
+.devin
+
