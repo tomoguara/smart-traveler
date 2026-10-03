@@ -1,3 +1,6 @@
+# Copyright (C) 2026 Tonworio(Ton) Oguara
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 """Main entry point for the Multi-Agent Travel Planning System.
 
 This module provides a CLI interface to run the travel planning workflow

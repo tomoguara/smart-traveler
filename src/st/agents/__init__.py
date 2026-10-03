@@ -1,3 +1,6 @@
+# Copyright (C) 2026 Tonworio(Ton) Oguara
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 """Agents module for the multi-agent travel planning system."""
 
 from .orchestrator import classify_query_parallel, QueryClassifier

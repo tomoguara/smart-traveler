@@ -1,3 +1,6 @@
+# Copyright (C) 2026 Tonworio(Ton) Oguara
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 """Hotel search tool using SerpAPI (via google-serp package)."""
 
 import json

@@ -1,3 +1,6 @@
+# Copyright (C) 2026 Tonworio(Ton) Oguara
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 """Unit tests for the planner (itinerary) agent's use of deep_research (no network calls)."""
 
 from langchain_core.messages import AIMessage, ToolMessage

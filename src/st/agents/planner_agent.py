@@ -1,3 +1,6 @@
+# Copyright (C) 2026 Tonworio(Ton) Oguara
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 """Planner agent for travel planning and itinerary research."""
 
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage, ToolMessage

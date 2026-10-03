@@ -1,3 +1,6 @@
+# Copyright (C) 2026 Tonworio(Ton) Oguara
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 """Multi-Agent Travel Planning System.
 
 This package provides a modular implementation of a multi-agent system

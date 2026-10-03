@@ -1,3 +1,6 @@
+' Copyright (C) 2026 Tonworio(Ton) Oguara
+' SPDX-License-Identifier: AGPL-3.0-or-later
+
 @startuml
 ' Component-based conversion of the end-to-end data flow diagram in
 ' docs/What_We_Are_Building_Smart_Travel_Planning_MAS.md ("Data Flow (End to End)")

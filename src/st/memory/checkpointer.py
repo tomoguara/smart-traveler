@@ -1,3 +1,6 @@
+# Copyright (C) 2026 Tonworio(Ton) Oguara
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 """Multi-turn memory: SQLite checkpoint persistence for the travel planning graph.
 
 The compiled graph saves a checkpoint of the whole TravelPlannerState after every step,

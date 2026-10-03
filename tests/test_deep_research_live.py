@@ -1,3 +1,6 @@
+# Copyright (C) 2026 Tonworio(Ton) Oguara
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 """Live test for the deep_research tool (real OpenAI + Tavily calls).
 
 Skipped by default; run with: uv run pytest -m live

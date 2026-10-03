@@ -1,3 +1,6 @@
+# Copyright (C) 2026 Tonworio(Ton) Oguara
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 """Memory module: multi-turn conversation persistence (SQLite checkpointer)."""
 
 from .checkpointer import (

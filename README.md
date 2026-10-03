@@ -1,4 +1,9 @@
-# Smart Travel Planning Multi-Agent System
+<!--
+Copyright (C) 2026 Tonworio(Ton) Oguara
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+
+# The Smart Travel Planning Multi-Agent System
 
 A command-line travel assistant built with [LangGraph](https://langchain-ai.github.io/langgraph/). It coordinates several specialised AI agents to:
 
@@ -353,3 +358,9 @@ To view them, install the VS Code **PlantUML** extension (needs Java and Graphvi
 **Switch memory to Postgres:** `uv add langgraph-checkpoint-postgres`. Then in `memory/checkpointer.py`, change `open_checkpointer()` to open the connection with `async with AsyncPostgresSaver.from_conn_string(<postgres-url>) as checkpointer:`. Keep the strict serializer (`CHECKPOINT_TYPES`), call `await checkpointer.setup()` once to create the tables, and yield the saver. Callers only use the generic checkpointer API, so nothing else changes.
 
 **Tune result sizes:** `MAX_FLIGHT_OPTIONS`, `MAX_RETURN_OPTIONS`, `MAX_HOTEL_OPTIONS` and `MAX_SNIPPET_CHARS` (tools); `MAX_HISTORY_MESSAGES` and `MAX_HISTORY_MESSAGE_CHARS` (orchestrator); `DEEP_RESEARCH_RECURSION_LIMIT` (deep research). Larger values give agents more context but cost more tokens.
+
+---
+
+## License
+
+Copyright (C) 2026 Tonworio(Ton) Oguara. Licensed under AGPLv3.

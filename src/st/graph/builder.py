@@ -1,3 +1,6 @@
+# Copyright (C) 2026 Tonworio(Ton) Oguara
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 """Graph builder for the multi-agent travel planning system."""
 
 from typing import Literal, Sequence

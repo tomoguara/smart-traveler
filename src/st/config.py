@@ -1,3 +1,6 @@
+# Copyright (C) 2026 Tonworio(Ton) Oguara
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 """Configuration module for the Smart Travel Planning Multi-Agent System.
 
 This module handles API key configuration and environment variable loading.

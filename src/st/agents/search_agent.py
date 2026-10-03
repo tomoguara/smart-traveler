@@ -1,3 +1,6 @@
+# Copyright (C) 2026 Tonworio(Ton) Oguara
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 """Search agent for flight and hotel searches."""
 
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage, ToolMessage

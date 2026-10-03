@@ -1,3 +1,6 @@
+# Copyright (C) 2026 Tonworio(Ton) Oguara
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 """Synthesizer for combining results from parallel agents."""
 
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage

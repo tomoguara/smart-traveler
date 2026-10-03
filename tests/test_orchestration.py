@@ -1,3 +1,6 @@
+# Copyright (C) 2026 Tonworio(Ton) Oguara
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 """Unit tests for orchestrator routing, per-agent sub-queries and the deferred synthesizer (no network)."""
 
 from datetime import date

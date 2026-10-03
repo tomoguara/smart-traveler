@@ -1,3 +1,6 @@
+# Copyright (C) 2026 Tonworio(Ton) Oguara
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 """State definitions for the Multi-Agent Travel Planning System.
 
 This module defines the shared state that all agents read from and write to.

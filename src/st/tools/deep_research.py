@@ -1,3 +1,6 @@
+# Copyright (C) 2026 Tonworio(Ton) Oguara
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 """Deep research tool backed by a deepagents itinerary-research sub-agent.
 
 The planner (itinerary) agent invokes this tool for deep analysis such as

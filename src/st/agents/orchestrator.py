@@ -1,3 +1,6 @@
+# Copyright (C) 2026 Tonworio(Ton) Oguara
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 """Orchestrator agent for routing queries to appropriate sub-agents."""
 
 from datetime import date
