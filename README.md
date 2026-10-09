@@ -219,7 +219,7 @@ smart-traveler/
 │   └── memory/checkpointer.py  # multi-turn memory (SQLite checkpoints) and audit trail
 ├── tests/                      # pytest suite (unit tests + opt-in live test)
 ├── docs/                       # design notes and PlantUML architecture diagrams
-├── notebooks/                  # original exploratory notebook (Google Colab)
+├── docs/images/                # PlantUML source and rendered images
 ├── data/                       # runtime data, e.g. the memory database (git-ignored)
 ├── pyproject.toml / uv.lock    # dependencies and tool configuration
 └── .env                        # your API keys (git-ignored, create it yourself)
@@ -322,20 +322,14 @@ uv run st --audit --thread-id dev-check
 
 ### 2.6 Architecture diagrams
 
-`docs/` contains PlantUML diagrams of the system as built:
+The `docs/images/` folder contains PlantUML diagrams of the system:
 
 | File | Shows |
 |---|---|
-| `smart_travel_mas_01_system_context.puml` | The system, its user, external APIs and storage |
-| `smart_travel_mas_02_component_architecture.puml` | Modules, their dependencies and libraries |
-| `smart_travel_mas_03_langgraph_workflow.puml` | The LangGraph state machine (routing, tool loops, deferred synthesizer) |
-| `smart_travel_mas_04_orchestrator_routing.puml` | How the orchestrator classifies queries and writes sub-queries |
-| `smart_travel_mas_05_sequence_mixed_query.puml` | End-to-end run of a flights + hotels + itinerary request |
-| `smart_travel_mas_06_sequence_agent_tool_loop.puml` | The agent ⇄ tool loop, down to the SerpAPI calls |
-| `smart_travel_mas_07_shared_state_model.puml` | State fields, reducers and which node reads/writes what |
-| `smart_travel_mas_08_multi_turn_memory.puml` | Checkpoint persistence across runs, `--history` and `--audit` |
+| `smart_travel_mas_high_level_overview.puml` | High-level component architecture: You → Orchestrator → Search/Planner agents → Synthesizer |
+| `smart_travel_mas_e2e_dataflow.puml` | End-to-end dataflow including shared state, tools, and final recommendation |
 
-To view them, install the VS Code **PlantUML** extension (needs Java and Graphviz) and press Alt+D, or render images with `java -jar plantuml.jar -tsvg docs/*.puml`. `docs/What_We_Are_Building_Smart_Travel_Planning_MAS.md` describes the original design, and `notebooks/multi-agent_travel_planner.ipynb` is the Colab prototype this package grew from.
+To view them, install the VS Code **PlantUML** extension (needs Java and Graphviz) and press Alt+D, or render images with `java -jar plantuml.jar -tsvg docs/images/*.puml`. The main architectural documentation is in `docs/Building_a_Smart_Travel_Planning_MAS.md`, which walks through the design and implementation of this multi-agent system.
 
 ### 2.7 Common extensions
 
